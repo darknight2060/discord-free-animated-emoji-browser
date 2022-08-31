@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="background.js"></script>
+  </head>
+  
+  <div class="container">
+    <div class="title">
+      DaTk <div class="version">v.1.0.0</div>
+    </div>
+
+    <div class="settings">
+      <div class="setting">
+        Emoji Size:
+
+        <input class="input" maxlength="4">
+      </div>
+    </div>
+
+    <button onclick="saveSettings()">Save</button>
+  </div>
+  
+  <style>
+    @font-face {
+      font-family: poppins;
+      src: url('./assets/Poppins-Regular.ttf');
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .container {
+      width: 200px;
+      height: auto;
+      padding: 15px 22px 20px;
+      background-color: #000;
+      border: 3px solid #5499ff;
+    }
+
+    .title {
+      color: #fff;
+      font-size: 26px;
+      font-family: poppins;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .version {
+      color: #666;
+      font-size: 20px;
+      margin-left: 15px;
+    }
+
+    .settings {
+      border-top: 2px solid #333;
+      margin-top: 5px;
+    }
+
+    .setting {
+      color: #ddd;
+      font-size: 18px;
+      font-family: poppins;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .input {
+      width: 50px;
+      color: #fff;
+      font-size: 16px;
+      background: none;
+      margin-left: 10px;
+      padding: 2px 5px;
+      border: 3px solid #666;
+      border-radius: 5px;
+      outline: none;
+      transition: .2s;
+    }
+
+    .input:focus {
+      border: 3px solid #eee;
+    }
+
+    button {
+      color: #fff;
+      font-size: 14px;
+      font-family: poppins;
+      margin: 20px 0 0 auto;
+      padding: 5px 12px;
+      background: #5499ff;
+      border: 0;
+      border-radius: 5px;
+      display: block;
+      transition: .2s;
+    }
+
+    button:hover {
+      background: #4277c7;
+      cursor: pointer;
+    }
+  </style>
+</html>

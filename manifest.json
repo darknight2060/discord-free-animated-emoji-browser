@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Discord Free Animated Emoji Browser",
+  "description": "Free Animated Emojis & Stickers",
+  "version": "1.0.0",
+  "icons": { 
+    "16": "/assets/logo.png",
+    "48": "/assets/logo.png",
+    "128": "/assets/logo.png"
+  },
+  "background": {
+    "scripts": [
+      "bin/debug.js",
+      "languages.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://discord.com/*",
+        "*://beta.discord.com/*",
+        "*://canary.discord.com/*"
+      ], 
+      "js": ["bin/debug.js", "languages.js", "background.js"]
+    }
+  ],
+  
+  "browser_action": {
+    "default_icon": "/assets/logo.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab"
+  ]
+}
